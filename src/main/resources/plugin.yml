@@ -1,0 +1,5 @@
+name: ServerStatus
+version: 1.0.0
+main: dev.cosmixmc.serverstatus.ServerStatusPlugin
+api-version: '1.21'
+description: Publishes live Paper server status to a Discord channel.

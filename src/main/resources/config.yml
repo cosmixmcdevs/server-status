@@ -1,0 +1,83 @@
+# Configuration for the Server Status plugin.
+# ServerStatus by github.com/cosmixmcdevs
+# https://github.com/cosmixmcdevs/server-status made by jamie666real (https://github.com/jamie666real)
+
+discord:
+  # Create a bot in the Discord Developer Portal and invite it with View Channel,
+  # Send Messages, and Embed Links permissions.
+  bot-token: ''
+  channel-id: ''
+  update-interval-seconds: 60
+  # How long to show the starting status before switching to online.
+  startup-delay-seconds: 10
+  # Filled in automatically after the first status message is sent. Clear this
+  # value to make the plugin send a new status message.
+  message-id: ''
+
+  embed:
+    title: 'Minecraft Server Status'
+    # Optional URL opened when the title is clicked.
+    url: ''
+    color: '#43B581'
+    description: '{motd}'
+    online-status-text: '🟢 Online'
+    starting-status-text: '🟡 Starting'
+    offline-status-text: '🔴 Offline'
+    starting-color: '#FEE75C'
+    offline-color: '#ED4245'
+    timestamp: true
+    author:
+      name: ''
+      url: ''
+      icon-url: ''
+    footer:
+      text: ''
+      icon-url: ''
+    thumbnail-url: ''
+    image-url: ''
+    # Reorder keys to change field order. Remove a key to hide it, or set a
+    # field's enabled option to false. Additional custom fields can be added.
+    field-order:
+      - status
+      - players
+      - ping
+      - online_players
+      - tps
+      - version
+      - uptime
+    fields:
+      status:
+        enabled: true
+        name: 'Status'
+        value: '{status}'
+        inline: true
+      players:
+        enabled: true
+        name: 'Players'
+        value: '{player_count} / {max_players}'
+        inline: true
+      ping:
+        enabled: true
+        name: 'Player ping'
+        value: '{ping}'
+        inline: false
+      online_players:
+        enabled: true
+        name: 'Online players'
+        value: '{online_players}'
+        inline: false
+      tps:
+        enabled: true
+        name: 'TPS'
+        value: '{tps}'
+        inline: true
+      version:
+        enabled: true
+        name: 'Version'
+        value: '{version}'
+        inline: true
+      uptime:
+        enabled: true
+        name: 'Uptime'
+        value: '{uptime}'
+        inline: true
